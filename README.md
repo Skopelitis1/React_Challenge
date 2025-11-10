@@ -1,17 +1,27 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ - The application is built with React and Vite.
+ - State is managed using React hooks.
+ - The GitHub fetching logic is separated into a service file to keep it clean.
+ - Sorting and filtering are implemented in a utility (sortRepos) to keep the UI components simple.
+ - TailwindCSS is used for styling to maintain a clean and responsive layout with minimal CSS overhead.
+ - Debounced search (via react-use) is used to avoid unnecessary filtering operations on every keystroke.
+ - The project folder structure follows a clear separation of concerns (components, hooks, services, utils).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Running the Application Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies:
 
-## Expanding the ESLint configuration
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# QnR_Project
+Start the development server:
+
+npm run dev
+
+## Environment Variables
+
+The project requires a GitHub Personal Access Token:
+
+VITE_API_KEY=your_github_token
